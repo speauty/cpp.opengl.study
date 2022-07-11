@@ -361,3 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# bin
+bin/
+bin-int/
+
+# VS项目文件忽略
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user

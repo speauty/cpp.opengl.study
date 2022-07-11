@@ -1,0 +1,3 @@
+[submodule "OpenGLStudy/vendor/GLFW"]
+	path = OpenGLStudy/vendor/GLFW
+	url = git@github.com:speauty/glfw.git

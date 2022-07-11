@@ -5,6 +5,13 @@ workspace "OpenGLStudy"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDirs = {}
+IncludeDirs["GLFW"] = "OpenGLStudy/vendor/GLFW/include"
+IncludeDirs["Glad"] = "OpenGLStudy/vendor/Glad/include"
+
+include "OpenGLStudy/vendor/GLFW"
+include "OpenGLStudy/vendor/Glad"
+
 project "OpenGLStudy"
 	location "OpenGLStudy"
 	kind "ConsoleApp"
@@ -23,10 +30,14 @@ project "OpenGLStudy"
 
 	includedirs {
 		"%{prj.name}/src",
+		"%{IncludeDirs.GLFW}",
+		"%{IncludeDirs.Glad}",
 	}
 	
 	links
 	{
+	    "GLFW",
+	    "Glad",
 		"opengl32.lib"
 	}
 	
